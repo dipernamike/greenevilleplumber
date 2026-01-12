@@ -52,7 +52,7 @@ jobs:
 
       - name: Install Lambda dependencies
         working-directory: lambda
-        run: npm ci
+        run: npm install
 
       - name: Validate SAM template
         run: |

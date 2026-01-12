@@ -47,14 +47,21 @@ This site serves both domains (same content):
 2. Create ACM certificate covering both domains (or wildcard)
 3. Set up Route 53 hosted zones for both domains pointing to CloudFront
 
+## Production Resources
+
+- **S3 Bucket**: `greenevilleplumber.com`
+- **CloudFront Distribution**: `E2N9GMNPRF83RB` (https://drevytctus26z.cloudfront.net)
+- **API Gateway**: `https://2vmjm4hrnh.execute-api.us-east-1.amazonaws.com/prod/contact`
+- **Lambda Stack**: `greenevilleplumber-contact`
+
 ## Deployment
 
 ### Frontend (S3 + CloudFront)
 
 ```bash
 npm run build
-aws s3 sync dist/ s3://BUCKET_NAME --delete
-aws cloudfront create-invalidation --distribution-id DIST_ID --paths "/*"
+aws s3 sync dist/ s3://greenevilleplumber.com --delete
+aws cloudfront create-invalidation --distribution-id E2N9GMNPRF83RB --paths "/*"
 ```
 
 ### Lambda (SAM)

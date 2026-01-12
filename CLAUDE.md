@@ -32,7 +32,23 @@ make local-api               # Start local API on port 3001
 
 # Build for production
 make build                   # or: docker compose run --rm web npm run build
+
+# Testing & Linting
+npm test                     # Run Vitest tests
+npm run lint                 # Run ESLint
+npm run format               # Run Prettier
+npm run format:check         # Check formatting without fixing
 ```
+
+## CI/CD
+
+GitHub Actions (`.github/workflows/ci.yml`) runs on push/PR to main:
+- Install dependencies (fresh install, no cache)
+- ESLint linting
+- Prettier formatting check
+- Astro build
+- Vitest tests
+- SAM template validation
 
 ## Domains
 
@@ -51,8 +67,10 @@ This site serves both domains (same content):
 
 - **S3 Bucket**: `greenevilleplumber.com`
 - **CloudFront Distribution**: `E2N9GMNPRF83RB` (https://drevytctus26z.cloudfront.net)
+- **CloudFront Function**: `greenevilleplumber-url-rewrite` (handles /path -> /path/index.html routing)
 - **API Gateway**: `https://2vmjm4hrnh.execute-api.us-east-1.amazonaws.com/prod/contact`
 - **Lambda Stack**: `greenevilleplumber-contact`
+- **ACM Certificate**: Pending validation for greenevilleplumber.com + rogersvilleplumber.com
 
 ## Deployment
 

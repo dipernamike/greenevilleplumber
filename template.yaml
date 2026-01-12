@@ -1,0 +1,69 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Greeneville Plumber Contact Form API
+
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - prod
+
+  ToEmail:
+    Type: String
+    Description: Email address to receive contact form submissions
+    Default: mikemitchellplumber@gmail.com
+
+  FromEmail:
+    Type: String
+    Description: Verified SES sender email
+    Default: mikemitchellplumber@gmail.com
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs20.x
+    MemorySize: 256
+
+Resources:
+  ContactFormFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub greenevilleplumber-contact-${Environment}
+      CodeUri: lambda/
+      Handler: contact.handler
+      Environment:
+        Variables:
+          TO_EMAIL: !Ref ToEmail
+          FROM_EMAIL: !Ref FromEmail
+          ENVIRONMENT: !Ref Environment
+      Policies:
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - ses:SendEmail
+                - ses:SendRawEmail
+              Resource: '*'
+      Events:
+        ContactApi:
+          Type: Api
+          Properties:
+            Path: /contact
+            Method: POST
+            RestApiId: !Ref ContactApi
+
+  ContactApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: !Ref Environment
+      Cors:
+        AllowOrigin: "'*'"
+        AllowHeaders: "'Content-Type'"
+        AllowMethods: "'POST,OPTIONS'"
+
+Outputs:
+  ApiEndpoint:
+    Description: Contact Form API endpoint
+    Value: !Sub https://${ContactApi}.execute-api.${AWS::Region}.amazonaws.com/${Environment}/contact

@@ -1,0 +1,7 @@
+{
+  "httpMethod": "POST",
+  "body": "{\"name\":\"John Doe\",\"phone\":\"423-555-1234\",\"email\":\"john@example.com\",\"service\":\"drain\",\"message\":\"My kitchen sink is clogged.\"}",
+  "headers": {
+    "Content-Type": "application/json"
+  }
+}

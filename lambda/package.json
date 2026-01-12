@@ -1,0 +1,10 @@
+{
+  "name": "greenevilleplumber-contact-lambda",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Contact form Lambda function",
+  "main": "contact.js",
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.0.0"
+  }
+}

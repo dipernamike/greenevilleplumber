@@ -57,4 +57,4 @@ jobs:
       - name: Validate SAM template
         run: |
           pip install aws-sam-cli
-          sam validate
+          sam validate --region us-east-1

@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "4321:4321"
+      - '4321:4321'
     volumes:
       - .:/app
       - /app/node_modules
@@ -16,15 +16,15 @@ services:
   localstack:
     image: localstack/localstack:latest
     ports:
-      - "4567:4566"  # LocalStack Gateway (using 4567 to avoid conflict)
+      - '4567:4566' # LocalStack Gateway (using 4567 to avoid conflict)
     environment:
       - SERVICES=lambda,apigateway,ses,logs
       - DEBUG=1
       - LAMBDA_EXECUTOR=docker
       - DOCKER_HOST=unix:///var/run/docker.sock
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "./localstack:/etc/localstack/init/ready.d"
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - './localstack:/etc/localstack/init/ready.d'
       - localstack_data:/var/lib/localstack
 
 volumes:

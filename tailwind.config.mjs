@@ -35,7 +35,7 @@ export default {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-        }
+        },
       },
       fontFamily: {
         sans: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],

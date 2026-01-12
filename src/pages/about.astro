@@ -2,13 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About Us" description="Learn about M & M Plumbing, a family-owned plumbing company serving Greeneville, TN since 2006.">
+<Layout
+  title="About Us"
+  description="Learn about M & M Plumbing, a family-owned plumbing company serving Greeneville, TN since 2006."
+>
   <!-- Hero Header -->
   <section class="relative bg-primary-900 text-white py-20">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary-800 via-primary-900 to-dark opacity-95"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-primary-800 via-primary-900 to-dark opacity-95"
+    >
+    </div>
     <div class="container mx-auto px-4 relative z-10 text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">About M & M Plumbing</h1>
-      <p class="text-xl text-primary-100 max-w-2xl mx-auto">Family-owned and operated since 2006.</p>
+      <p class="text-xl text-primary-100 max-w-2xl mx-auto">
+        Family-owned and operated since 2006.
+      </p>
     </div>
   </section>
 
@@ -17,18 +25,28 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Serving Greeneville Since 2006</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Serving Greeneville Since 2006
+          </h2>
           <p class="text-gray-600 text-lg mb-6">
-            M & M Plumbing has been providing quality plumbing services to the Greeneville and Rogersville areas for nearly 20 years. As a locally-owned family business, we take pride in treating every customer like a neighbor.
+            M & M Plumbing has been providing quality plumbing services to the Greeneville and
+            Rogersville areas for nearly 20 years. As a locally-owned family business, we take pride
+            in treating every customer like a neighbor.
           </p>
           <p class="text-gray-600 text-lg mb-6">
-            Our team of licensed plumbers brings decades of combined experience to every job, from simple faucet repairs to complete plumbing installations for new construction. We believe in doing the job right the first time, using quality materials and proven techniques.
+            Our team of licensed plumbers brings decades of combined experience to every job, from
+            simple faucet repairs to complete plumbing installations for new construction. We
+            believe in doing the job right the first time, using quality materials and proven
+            techniques.
           </p>
           <p class="text-gray-600 text-lg">
-            When you call M & M Plumbing, you're not just getting a plumber - you're getting a partner who cares about your home and your family's comfort.
+            When you call M & M Plumbing, you're not just getting a plumber - you're getting a
+            partner who cares about your home and your family's comfort.
           </p>
         </div>
-        <div class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl h-80 lg:h-96 flex items-center justify-center">
+        <div
+          class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl h-80 lg:h-96 flex items-center justify-center"
+        >
           <div class="text-center">
             <div class="text-7xl font-bold text-primary-600 mb-2">19+</div>
             <div class="text-xl text-primary-700 font-medium">Years of Service</div>
@@ -48,9 +66,21 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Honest Pricing</h3>
@@ -58,9 +88,21 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Quality Work</h3>
@@ -68,9 +110,21 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
             </svg>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Respectful Service</h3>
@@ -78,9 +132,21 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-lg font-bold text-gray-900 mb-2">Clean Job Sites</h3>
@@ -99,30 +165,86 @@ import Layout from '../layouts/Layout.astro';
             <h3 class="text-2xl font-bold text-gray-900 mb-6">Areas We Serve</h3>
             <ul class="space-y-4">
               <li class="flex items-center gap-3">
-                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <svg
+                  class="w-6 h-6 text-primary-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 <span class="text-lg text-gray-700">Greeneville, TN</span>
               </li>
               <li class="flex items-center gap-3">
-                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <svg
+                  class="w-6 h-6 text-primary-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 <span class="text-lg text-gray-700">Rogersville, TN</span>
               </li>
               <li class="flex items-center gap-3">
-                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <svg
+                  class="w-6 h-6 text-primary-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 <span class="text-lg text-gray-700">Bulls Gap, TN</span>
               </li>
               <li class="flex items-center gap-3">
-                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <svg
+                  class="w-6 h-6 text-primary-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 <span class="text-lg text-gray-700">And surrounding areas</span>
               </li>
@@ -130,12 +252,16 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         <div class="order-1 lg:order-2">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Local Service You Can Trust</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Local Service You Can Trust
+          </h2>
           <p class="text-gray-600 text-lg mb-6">
-            As a local business, we're invested in our community. We've been serving families in Greene County and the surrounding areas for nearly two decades.
+            As a local business, we're invested in our community. We've been serving families in
+            Greene County and the surrounding areas for nearly two decades.
           </p>
           <p class="text-gray-600 text-lg">
-            When you choose M & M Plumbing, you're supporting a local family business and getting the personalized attention that only a neighborhood plumber can provide.
+            When you choose M & M Plumbing, you're supporting a local family business and getting
+            the personalized attention that only a neighborhood plumber can provide.
           </p>
         </div>
       </div>
@@ -147,9 +273,17 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
       <p class="text-xl text-primary-100 mb-8">Call us today for all your plumbing needs.</p>
-      <a href="tel:+14239468310" class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded font-semibold text-lg transition inline-flex items-center justify-center gap-2">
+      <a
+        href="tel:+14239468310"
+        class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded font-semibold text-lg transition inline-flex items-center justify-center gap-2"
+      >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          ></path>
         </svg>
         (423) 946-8310
       </a>

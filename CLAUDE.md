@@ -37,10 +37,12 @@ make build                   # or: docker compose run --rm web npm run build
 ## Domains
 
 This site serves both domains (same content):
+
 - **greenevilleplumber.com** - Primary domain
 - **rogersvilleplumber.com** - Alternate domain
 
 ### CloudFront Multi-Domain Setup
+
 1. Add both domains as alternate domain names (CNAMEs) in CloudFront
 2. Create ACM certificate covering both domains (or wildcard)
 3. Set up Route 53 hosted zones for both domains pointing to CloudFront
@@ -48,6 +50,7 @@ This site serves both domains (same content):
 ## Deployment
 
 ### Frontend (S3 + CloudFront)
+
 ```bash
 npm run build
 aws s3 sync dist/ s3://BUCKET_NAME --delete
@@ -55,6 +58,7 @@ aws cloudfront create-invalidation --distribution-id DIST_ID --paths "/*"
 ```
 
 ### Lambda (SAM)
+
 ```bash
 cd lambda && npm install
 sam build
@@ -63,6 +67,7 @@ sam deploy                   # Subsequent deploys
 ```
 
 ### SES Setup (Required for contact form)
+
 1. Verify sender email in SES console
 2. If in sandbox, also verify recipient email
 3. Request production access for real usage
@@ -93,9 +98,11 @@ events/                      # Lambda test events
 ## Environment Variables
 
 ### Frontend (Astro)
+
 - `PUBLIC_API_URL` - API Gateway endpoint (set in docker-compose for local, build arg for prod)
 
 ### Lambda
+
 - `TO_EMAIL` - Email to receive form submissions (default: mikemitchellplumber@gmail.com)
 - `FROM_EMAIL` - Verified SES sender email (default: mikemitchellplumber@gmail.com)
 - `ENVIRONMENT` - dev/prod
